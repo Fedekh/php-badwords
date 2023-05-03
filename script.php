@@ -1,12 +1,13 @@
 <?php
 
-$paragraph = $_GET["paragraph"];    // Prendo il valore del paragrafo inserito dall'utente(quello a destra) e lo salvo in una variabile (a sx)
-$word = $_GET["word-censored"];   // Prendo il valore della parola inserita dall'utente(quella a destra) e lo salvo in una variabile (a sx)
-$censored = "***";                  // Creo una variabile con gli asterischi che sostituiranno la parola inserita dall'utente
+$paragraph = $_GET["paragraph"];  // Prendo il valore del paragrafo inserito dall'utente(quello a destra) e lo salvo in una variabile (a sx)
+$word = $_GET["word-censored"];  // Prendo il valore della parola inserita dall'utente(quella a destra) e lo salvo in una variabile (a sx)
+$censored = "***";              // Creo una variabile con gli asterischi che sostituiranno la parola inserita dall'utente
 
 $paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostituisco la parola inserita dall'utente con gli asterischi nel paragrafo
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,8 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostitu
 </head>
 
 <body>
-    <div class="wrapper text-center container m-4">
+
+    <div class="wrapper text-center m-4">
 
         <h2 class="my-4">Il testo originale è : </h2>
         <p class="my-4">
@@ -35,7 +37,7 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostitu
             ?><br>
             <span class="my-5 spazio">
                 <?php
-                echo "Il paragrafo è lungo: " . strlen($paragraph) . " caratteri";
+                echo "Il paragrafo è lungo : " . strlen($paragraph) . " caratteri";
                 ?>
             </span>
         </p>
@@ -52,6 +54,26 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostitu
             </span>
         </p>
     </div>
+
+
+    <!-- PROVE FOR FUN PER INTEGRARE ALTRE COSE PER PROVARE E TESTARE -->
+
+    <div class="text-center my-5">
+
+        <button onclick="showAlert()" class="btn btn-warning"> Clicca qui &#128520;</button>
+    </div>
+
+    <!-- Provo una funzione che al click, con delay 2 secondi, ti riporta alla pagina iniziale di prova -->
+
+    <script>
+        function showAlert() {
+            alert("Ottimo hai censurato le parolacce, clicca OK per ricominciare da capo");
+            setInterval(function() {
+                window.location.href = "http://localhost:8888/Boolean%20Server%20Fake/php-badwords/";
+            }, 2000);
+        }
+    </script>
+
 </body>
 
 </html>

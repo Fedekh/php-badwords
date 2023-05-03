@@ -21,7 +21,7 @@
     <form class="m-4 container text-center mx-auto" action="./script.php" method="GET">
         <div>
             <label for="paragraph" class="m-4 form-label ">Scrivi un bel paragrafo &#128520; </label>
-            <textarea class="m-4 w-50 mx-auto form-control" name="paragraph" id="paragraph" rows="3"></textarea>
+            <textarea class="m-4 w-50 mx-auto form-control" name="paragraph" id="paragraph"></textarea>
         </div>
 
         <!--in entrambi gli input l'attributo NAME è importante per il backend, permette difatti di catturare il valore inserito dall'utente e gestirlo -->
