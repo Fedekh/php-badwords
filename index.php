@@ -18,7 +18,7 @@
 <body>
 
     <!--  in action noi inviamo questa richiesta di tipo GET al file PHP presente nel pattern -->
-    <form class="m-4 container text-center mx-auto" action="./script.php" method="GET">
+    <form class="m-4 container text-center mx-auto" action="script.php" method="GET">
         <div>
             <label for="paragraph" class="m-4 form-label ">Scrivi un bel paragrafo &#128520; </label>
             <textarea class="m-4 w-50 mx-auto form-control" name="paragraph" id="paragraph"></textarea>

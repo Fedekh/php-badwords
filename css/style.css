@@ -11,10 +11,25 @@ h2{
     color: rgb(236, 143, 4);
 }
 
-p {
+.one {
     color: rgb(17, 218, 61);
+    scale: 1.5; 
+    animation: giant 1.5s infinite;
 }
 
-span{
+@keyframes giant {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+.two{
     color: rgb(33, 161, 137);
 }

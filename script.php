@@ -4,11 +4,9 @@ $paragraph = $_GET["paragraph"];  // Prendo il valore del paragrafo inserito dal
 $word = $_GET["word-censored"];  // Prendo il valore della parola inserita dall'utente(quella a destra) e lo salvo in una variabile (a sx)
 $censored = "***";              // Creo una variabile con gli asterischi che sostituiranno la parola inserita dall'utente
 
-$paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostituisco la parola inserita dall'utente con gli asterischi nel paragrafo
+$paragraph_censored = str_replace($word, $censored, $paragraph);  // Sostituisco la parola inserita dall'utente con gli asterischi nel paragrafo
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,28 +28,28 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);      // Sostitu
 
     <div class="wrapper text-center m-4">
 
-        <h2 class="my-4">Il testo originale è : </h2>
-        <p class="my-4">
+        <h2 class="my-5">Il testo originale è : </h2>
+        <p class="one my-5">
             <?php
             echo $paragraph;
-            ?><br>
-            <span class="my-5 spazio">
-                <?php
-                echo "Il paragrafo è lungo : " . strlen($paragraph) . " caratteri";
-                ?>
-            </span>
+            ?>
         </p>
-        <h2 class="my-4">Il testo censurato è : </h2>
-        <p class="my-4">
+        <p class="two my-5">
+            <?php
+            echo "Il paragrafo è lungo : " . strlen($paragraph) . " caratteri";
+            ?>
+        </p>
+
+        <h2 class="my-5">Il testo censurato è : </h2>
+        <p class="one my-5">
             <?php
             echo $paragraph_censored;
-
-            ?> <br>
-            <span class="spazio">
-                <?php
-                echo "Il nuovo paragrafo è lungo: " . strlen($paragraph_censored) . " caratteri";
-                ?>
-            </span>
+            ?>
+        </p>
+        <p class="two my-5">
+            <?php
+            echo "Il nuovo paragrafo è lungo: " . strlen($paragraph_censored) . " caratteri";
+            ?>
         </p>
     </div>
 
