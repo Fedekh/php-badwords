@@ -30,26 +30,18 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);  // Sostituisco
 
         <h2 class="my-5">Il testo originale è : </h2>
         <p class="one my-5">
-            <?php
-            echo $paragraph;
-            ?>
+            <?php echo $paragraph;?>
         </p>
         <p class="two my-5">
-            <?php
-            echo "Il paragrafo è lungo : " . strlen($paragraph) . " caratteri";
-            ?>
+            <?php echo "Il paragrafo è lungo : " . strlen($paragraph) . " caratteri"; ?>
         </p>
 
         <h2 class="my-5">Il testo censurato è : </h2>
         <p class="one my-5">
-            <?php
-            echo $paragraph_censored;
-            ?>
+            <?php echo $paragraph_censored; ?>
         </p>
         <p class="two my-5">
-            <?php
-            echo "Il nuovo paragrafo è lungo: " . strlen($paragraph_censored) . " caratteri";
-            ?>
+            <?php echo "Il nuovo paragrafo è lungo: " . strlen($paragraph_censored) . " caratteri"; ?>
         </p>
     </div>
 
@@ -64,10 +56,10 @@ $paragraph_censored = str_replace($word, $censored, $paragraph);  // Sostituisco
     <!-- Provo una funzione che al click, con delay 2 secondi, ti riporta alla pagina iniziale di prova -->
 
     <script>
-        function showAlert() {
-            alert("Ottimo hai censurato le parolacce, clicca OK per ricominciare da capo");
+        function showAlert() {  // Funzione che mostra un alert e poi dopo 2 secondi ti riporta alla pagina iniziale
+            alert("Ottimo hai censurato le parolacce, clicca OK per ricominciare da capo tra 2 secondi");
             setInterval(function() {
-                window.location.href = "http://localhost:8888/Boolean%20Server%20Fake/php-badwords/";
+                window.location.href = "./";
             }, 2000);
         }
     </script>
